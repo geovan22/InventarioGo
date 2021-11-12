@@ -8,6 +8,24 @@
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <title>Home</title>
+      {if isset($title)}
+        <title>{$title}</title>
+      {else}
+        <title>Home</title>
+      {/if}
+      
     </head>
     <body>
+    <div class="row">
+    
+    {if isset($Nombre)}
+          <nav class="col s12">
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo">Nombre: {$Nombre}</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="">Salir</a></li>
+              </ul>
+            </div>
+          </nav>
+    {/if}
+    

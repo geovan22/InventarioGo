@@ -6,7 +6,7 @@
             $servidor="localhost";
             $password="";
             $usuario="root";
-            $DB="inventarios";
+            $DB="inventario";
             
             /**
             Produccion  
