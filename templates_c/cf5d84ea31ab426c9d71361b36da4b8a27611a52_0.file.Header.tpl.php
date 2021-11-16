@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-11-12 03:51:33
+/* Smarty version 3.1.40, created on 2021-11-16 02:08:01
   from 'C:\xampp\htdocs\InventarioGo\templates\Cabeceras\Header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_618dd6b57d1c86_30062348',
+  'unifunc' => 'content_6193047136fc49_80217083',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cf5d84ea31ab426c9d71361b36da4b8a27611a52' => 
     array (
       0 => 'C:\\xampp\\htdocs\\InventarioGo\\templates\\Cabeceras\\Header.tpl',
-      1 => 1636685490,
+      1 => 1636685676,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_618dd6b57d1c86_30062348 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6193047136fc49_80217083 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
   <html>
     <head>
@@ -44,7 +44,6 @@ function content_618dd6b57d1c86_30062348 (Smarty_Internal_Template $_smarty_tpl)
     
     <?php if ((isset($_smarty_tpl->tpl_vars['Nombre']->value))) {?>
           <nav class="col s12">
-            
             <div class="nav-wrapper">
               <a href="#" class="brand-logo">Nombre: <?php echo $_smarty_tpl->tpl_vars['Nombre']->value;?>
 </a>
