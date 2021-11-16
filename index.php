@@ -20,8 +20,10 @@
     else
     {
         echo "No enxiste clase o metodo";
+  
     }
-?>
 
+    
+?>
 
 
