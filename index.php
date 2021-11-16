@@ -19,11 +19,11 @@
     }
     else
     {
-        echo "No enxiste clase o metodo";
+        echo "No enxiste clase o metodo prueba";
   
     }
 
-    
+
 ?>
 
 
