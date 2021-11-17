@@ -15,7 +15,7 @@
             $u=$_POST['user'];
             $p=$_POST['pass'];
             $u=$this->user->BuscarUsuario($u,$p);
-            
+         
             if($u->num_rows==0)
             {
                 $this->smarty->assign('alerta','Usuario o password no existe');

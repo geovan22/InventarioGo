@@ -12,7 +12,7 @@
             Produccion  
              
             $servidor="localhost";
-            $password="";;
+            $password="";
             $usuario="root";
             $DB="inventario";
             */

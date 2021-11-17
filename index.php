@@ -19,7 +19,7 @@
     }
     else
     {
-        echo "No enxiste clase o metodo prueba";
+        echo "No existe clase o metodo";
   
     }
 
