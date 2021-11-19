@@ -2,10 +2,12 @@
 	class RutaVista 
     {
        public $smarty;  
+       public $inventario;
 	   public function __construct()
        {
             session_start();
             $this->smarty = new  Smarty();
+            $this->inventario= new Inventarios();
        }
        
        public function BuscarProducto()
@@ -20,12 +22,21 @@
        
        public function IngresarProducto()
        {
+            $m= $this->inventario->MostrarMarca();
+            $ma=array();
+            while($marcas=mysqli_fetch_assoc($m))
+            {
+               array_push($ma,$marcas);
+            }
+            $this->smarty->assign('m',$ma);
             $this->smarty->assign('Nombre',$_SESSION['nombre']);
             $this->smarty->assign('title','Ingresar Producto');
             $this->smarty->assign('Invent','IngresarProducto');
             $this->smarty->assign('Carpeta','Inventario');
             $this->smarty->assign('Vista','Inventario');
             $this->smarty->display('Index.tpl');
+            
+
        }
 
        public function CrearMarca()
@@ -67,6 +78,13 @@
        }
        public function MostrarProducto()
        {
+          $p= $this->inventario->MostrarProducto();
+          $po=array();
+          while($productos=mysqli_fetch_assoc($p))
+          {
+             array_push($po,$productos);
+          }
+          $this->smarty->assign('p',$po);
             $this->smarty->assign('Nombre',$_SESSION['nombre']);
             $this->smarty->assign('title','Mostrar Producto');
             $this->smarty->assign('Invent','MostrarProducto');

@@ -3,18 +3,20 @@
     class Inventario
     {
         public $smarty;
-        public $invetario;
-        
+        public $invetarios;
+        public $vista;
         public function __construct()
         {
         $this->smarty=new Smarty();
-        $this->inventario=new Inventario();
+        $this->inventarios=new Inventarios();
+        $this->vista=new RutaVista();
         }
         public function IngresoMarca()
             {
-                $m=$_GET['marca'];
-                $d=$_GET['descr'];
-                $u=$this->inventario->IngresoMarca($m,$d);
+                $m=$_POST['marca'];
+                $d=$_POST['descr'];
+                $u=$this->inventarios->IngresoMarca($m,$d);
+                $this->vista->CrearMarca();
             }
 
 

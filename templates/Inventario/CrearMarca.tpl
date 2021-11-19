@@ -1,5 +1,5 @@
 <div class="row">
-    <form  class="col s10" method="get" action="?Controller=Inventario&Method=IngresoMarca">
+    <form  class="col s10" method="post" action="?Controller=Inventario&Method=IngresoMarca">
       <div class="row">
        <h1>Ingreso Marca</h1>
        <div class="input-field col s6">
@@ -9,7 +9,7 @@
         </div>
         <div class="input-field col s6">
           <i class="material-icons prefix">border_color</i>
-          <input name="Descripcion" placeholder="Descripcion" id="descr" type="text" class="validate" required=""">
+          <input name="descr" placeholder="Descripcion" id="descr" type="text" class="validate" required=""">
           <label for="descr">Descripcion</label>
         </div>
       </div>

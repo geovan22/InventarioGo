@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-11-16 02:08:01
+/* Smarty version 3.1.40, created on 2021-11-19 03:47:30
   from 'C:\xampp\htdocs\InventarioGo\templates\Cabeceras\Header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_6193047136fc49_80217083',
+  'unifunc' => 'content_61971042657603_33165513',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cf5d84ea31ab426c9d71361b36da4b8a27611a52' => 
     array (
       0 => 'C:\\xampp\\htdocs\\InventarioGo\\templates\\Cabeceras\\Header.tpl',
-      1 => 1636685676,
+      1 => 1637290047,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6193047136fc49_80217083 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61971042657603_33165513 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
   <html>
     <head>
@@ -39,6 +39,13 @@ function content_6193047136fc49_80217083 (Smarty_Internal_Template $_smarty_tpl)
       <?php }?>
       
     </head>
+    <style> 
+    footer{
+      position:absolute;
+      bottom:0;
+      width:100%;
+    }
+    </style>
     <body>
     <div class="row">
     
@@ -53,5 +60,7 @@ function content_6193047136fc49_80217083 (Smarty_Internal_Template $_smarty_tpl)
             </div>
           </nav>
     <?php }?>
+    
+
     <?php }
 }

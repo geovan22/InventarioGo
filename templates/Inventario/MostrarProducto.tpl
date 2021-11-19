@@ -2,27 +2,22 @@
 <table>
         <thead>
           <tr>
-              <th>Name</th>
-              <th>Item Name</th>
-              <th>Item Price</th>
+              <th>NOMBRE</th>
+              <th>Descripcion</th>
+              <th>PRECIO</th>
+              <th>STOCK</th>
           </tr>
         </thead>
 
         <tbody>
-          <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
+            {foreach from=$p item=$productos}
+            <tr>
+            <td>{$productos['Nombre']}</td>
+            <td>{$productos['Descricion']}</td>
+           <td>{$productos['Precio']}</td>
+           <td>{$productos['Stock']}</td>
           </tr>
-          <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>
-            <td>$3.76</td>
-          </tr>
-          <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-            <td>$7.00</td>
-          </tr>
+            {/foreach}
+  
         </tbody>
       </table>

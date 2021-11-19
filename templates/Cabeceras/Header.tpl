@@ -15,6 +15,13 @@
       {/if}
       
     </head>
+    <style> 
+    footer{
+      position:absolute;
+      bottom:0;
+      width:100%;
+    }
+    </style>
     <body>
     <div class="row">
     
@@ -28,4 +35,6 @@
             </div>
           </nav>
     {/if}
+    
+
     

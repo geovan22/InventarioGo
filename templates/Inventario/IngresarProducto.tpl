@@ -1,5 +1,5 @@
 <div class="row">
-    <form  class="col s10" method="get" action="?Controller=Inventario&Method=IngresoCategoria">
+    <form  class="col s10" method="post" action="?Controller=Inventario&Method=IngresoProducto">
       <div class="row">
       <h1>Ingreso Producto</h1>
     
@@ -8,45 +8,36 @@
           <input name="producto" placeholder="Nombre Producto" id="prod" type="text" class="validate" required="">
           <label for="prod">Nombre Producto</label>
         </div>
+
         <div class="input-field col s6">
           <i class="material-icons prefix">border_color</i>
           <input name="Descripcion" placeholder="Descripcion" id="descr" type="text" class="validate" required="">
           <label for="descr">Descripcion</label>
         </div>
-         <div class="input-field col s7">
-        <select class="Seleccionar Categoria">
-            <option value="" disabled selected>Selecionar Categoria</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
-        </select>
-         </div>
-        <div class="input-field col s7">
-        <select class="Seleccionar Marca">
-            <option value="" disabled selected>Selecionar Marca</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
-        </select>
-         </div>
+
+
         <div class="input-field col s6">
           <i class="material-icons prefix">border_color</i>
-          <input name="precio" placeholder="Precio" id="precio" type="int" class="validate" required="">
+          <input name="precio" placeholder="Precio" id="precio" type="number" class="validate" required="">
           <label for="precio">Precio</label>
         </div>
-         <div class="input-field col s7">
-        <select class="Seleccionar Proveedor">
-            <option value="" disabled selected>Selecionar Proveedor</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
-        </select>
-         </div>
-          <div class="input-field col s6">
+
+        
+             <div class="input-field col s6">
           <i class="material-icons prefix">border_color</i>
-          <input name="stock" placeholder="Stock" id="stock" type="int" class="validate" required="">
+          <input name="stock" placeholder="Stock" id="stock" type="number" class="validate" required="">
           <label for="stock">Stock</label>
         </div>
+
+          <div class="input-field col s7">
+        <select class="browser-default">
+            {foreach from=$m item=$marcas}
+              <option value="{$marcas['idMarca']}">
+                {$marcas['Nombre']}
+              </option>
+            {/foreach}
+        </select>
+         </div>
         
       </div>
      <div class="input-field col s8">
@@ -54,3 +45,10 @@
         </div>
     </form>
   </div>
+
+<script type="text/javascript">
+ document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, options);
+  });
+</script>
