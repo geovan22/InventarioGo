@@ -1,5 +1,3 @@
-
-
 <div class="row">
     <form  class="col s10" method="get" action="?Controller=Inventario&Method=IngresoCategoria">
       <div class="row">
