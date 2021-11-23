@@ -2,6 +2,17 @@
     <form  class="col s10" method="get" action="?Controller=Inventario&Method=IngresoCategoria">
       <div class="row">
       <h1>Crear Categoria</h1>
+
+       <div class="input-field col s7">
+          <select class="browser-default">
+            {foreach from=$m item=$marcas}
+              <option value="{$marcas['idPRODUCTO']}">
+                {$marcas['Nombre']}
+              </option>
+            {/foreach}
+        </select>
+         </div>
+         
        <div class="input-field col s6">
           <i class="material-icons prefix">local_library</i>
           <input name="categoria" placeholder="Categoria" id="categoria" type="text" class="validate" required="">
@@ -18,3 +29,10 @@
         </div>
     </form>
   </div>
+
+  <script type="text/javascript">
+ document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, options);
+  });
+</script>

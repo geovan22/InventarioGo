@@ -2,12 +2,13 @@
     <form  class="col s10" method="get" action="?Controller=Inventario&Method=IngresoCategoria">
       <div class="row">
       <h1>Ingresar Proveedores</h1>
-      <div class="input-field col s7">
+       <div class="input-field col s7">
         <select class="browser-default">
-            <option value="" disabled selected>Selecionar Producto</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
+            {foreach from=$m item=$marcas}
+              <option value="{$marcas['idPRODUCTO']}">
+                {$marcas['Nombre']}
+              </option>
+            {/foreach}
         </select>
          </div>
         <div class="input-field col s6">
@@ -36,3 +37,10 @@
         </div>
     </form>
   </div>
+
+<script type="text/javascript">
+ document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, options);
+  });
+</script>

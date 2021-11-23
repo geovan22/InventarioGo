@@ -5,7 +5,7 @@
     
         <div class="input-field col s6">
           <i class="material-icons prefix">account_circle</i>
-          <input name="producto" placeholder="Nombre Producto" id="prod" type="text" class="validate" required="">
+          <input name="producto" placeholder="Nombre" id="prod" type="text" class="validate" required="">
           <label for="prod">Nombre Producto</label>
         </div>
 

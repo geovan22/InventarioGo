@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-11-12 03:32:42
+/* Smarty version 3.1.40, created on 2021-11-19 04:35:14
   from 'C:\xampp\htdocs\InventarioGo\templates\Cabeceras\Footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_618dd24aaf1df8_55161487',
+  'unifunc' => 'content_61971b72181377_83707407',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '83a1446f3071833aa48c39bc2dbfb911ec817761' => 
     array (
       0 => 'C:\\xampp\\htdocs\\InventarioGo\\templates\\Cabeceras\\Footer.tpl',
-      1 => 1636684033,
+      1 => 1637290703,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_618dd24aaf1df8_55161487 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61971b72181377_83707407 (Smarty_Internal_Template $_smarty_tpl) {
 ?>      
       </div>
       <footer class="page-footer">

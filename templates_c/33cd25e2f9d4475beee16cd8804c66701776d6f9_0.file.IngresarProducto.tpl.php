@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-11-19 03:26:23
+/* Smarty version 3.1.40, created on 2021-11-23 01:14:35
   from 'C:\xampp\htdocs\InventarioGo\templates\Inventario\IngresarProducto.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61970b4fb6e9d7_36417154',
+  'unifunc' => 'content_619c326b7f3073_08371256',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '33cd25e2f9d4475beee16cd8804c66701776d6f9' => 
     array (
       0 => 'C:\\xampp\\htdocs\\InventarioGo\\templates\\Inventario\\IngresarProducto.tpl',
-      1 => 1637288781,
+      1 => 1637626472,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61970b4fb6e9d7_36417154 (Smarty_Internal_Template $_smarty_tpl) {
+function content_619c326b7f3073_08371256 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="row">
     <form  class="col s10" method="post" action="?Controller=Inventario&Method=IngresoProducto">
       <div class="row">
@@ -28,7 +28,7 @@ function content_61970b4fb6e9d7_36417154 (Smarty_Internal_Template $_smarty_tpl)
     
         <div class="input-field col s6">
           <i class="material-icons prefix">account_circle</i>
-          <input name="producto" placeholder="Nombre Producto" id="prod" type="text" class="validate" required="">
+          <input name="producto" placeholder="Nombre" id="prod" type="text" class="validate" required="">
           <label for="prod">Nombre Producto</label>
         </div>
 
