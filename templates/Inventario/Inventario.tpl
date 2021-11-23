@@ -7,3 +7,6 @@
         <img class="responsive-img" src="Recursos/descargar.jpg"/>
     {/if}
 </div>
+
+<script type="text/javascript">
+</script>
