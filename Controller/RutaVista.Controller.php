@@ -5,13 +5,13 @@
        public $inventario;
 	   public function __construct()
        {
-            session_start();
+           session_start();
             $this->smarty = new  Smarty();
             $this->inventario= new Inventarios();
        }
        
        public function BuscarProducto()
-       {
+       {    $this->smarty->assign('lista_producto',$_SESSION['lista_producto']);
             $this->smarty->assign('Nombre',$_SESSION['nombre']);
             $this->smarty->assign('title','Buscar Producto');
             $this->smarty->assign('Invent','BuscarProducto');
@@ -50,7 +50,7 @@
        }
        public function CrearCategoria()
        {
-          $p= $this->inventario->IngresarCategoria();
+          $p= $this->inventario->MostrarProducto();
           $po=array();
           while($productos=mysqli_fetch_assoc($p))
           {
@@ -59,14 +59,14 @@
           $this->smarty->assign('p',$po);
             $this->smarty->assign('Nombre',$_SESSION['nombre']);
             $this->smarty->assign('title','Ingresar Categoria');
-            $this->smarty->assign('Invent','CrearCategoria');
+            $this->smarty->assign('Invent','IngresarCategoria');
             $this->smarty->assign('Carpeta','Inventario');
             $this->smarty->assign('Vista','Inventario');
             $this->smarty->display('Index.tpl');
        }
        public function IngresarProveedor()
        {
-          $$p= $this->inventario->IngresarProveedores();
+          $p= $this->inventario->MostrarProducto();
           $po=array();
           while($productos=mysqli_fetch_assoc($p))
           {
@@ -75,7 +75,7 @@
           $this->smarty->assign('p',$po);
             $this->smarty->assign('Nombre',$_SESSION['nombre']);
             $this->smarty->assign('title','Ingresar Proveedor');
-            $this->smarty->assign('Invent','IngresarProveedor');
+            $this->smarty->assign('Invent','IngresarProveedores');
             $this->smarty->assign('Carpeta','Inventario');
             $this->smarty->assign('Vista','Inventario');
             $this->smarty->display('Index.tpl');
@@ -108,6 +108,7 @@
        }
        public function ActualizarProducto()
        {
+            $this->smarty->assign('NombreP',$_SESSION['NombreP']);
             $this->smarty->assign('Nombre',$_SESSION['nombre']);
             $this->smarty->assign('title','Actualizar Producto');
             $this->smarty->assign('Invent','ActualizarProducto');

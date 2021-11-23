@@ -5,8 +5,10 @@
         public $smarty;
         public $invetarios;
         public $vista;
+        
         public function __construct()
         {
+            session_start();
         $this->smarty=new Smarty();
         $this->inventarios=new Inventarios();
         $this->vista=new RutaVista();
@@ -20,34 +22,65 @@
             }
             public function IngresoCategoria()
             {
-                $m=$_POST['categoria'];
-                $d=$_POST['descr'];
-                $p=$_POST['producto'];
-                $u=$this->inventarios->IngresoCategoria($m,$d,$p);
-                $this->vista->IngresarCategoria();
+                
+                $n=$_POST['categoria'];
+                $d=$_POST['descripcion'];
+                $p=$_POST['nombre'];
+                $u=$this->inventarios->IngresoCategoria($p,$n,$d);
+                $this->vista->CrearCategoria();
             }
 
             public function IngresoProveedor()
             {
-                $p=$_POST['producto'];
-                 $pr=$_POST['provee'];
-                $d=$_POST['descr'];
-                $n=$_POST['nit'];
-                $c=$_POST['correo'];
-               
-                $u=$this->inventarios->IngresoProveedor($p,$pe,$d,$n,$c);
-                $this->vista->IngresarProveedores();
+                $p=$_POST['nombre'];
+                $pr=$_POST['provee'];
+                $d=$_POST['Descripcion'];
+                $n=$_POST['Nit'];
+                $c=$_POST['Correo'];
+                $t=$_POST['tele'];
+                $u=$this->inventarios->IngresoProveedor($p,$pr,$d,$n,$c,$t);
+                $this->vista->IngresarProveedor();
             }
         public function IngresoProducto()
             {
-                $n=$_POST['prod'];
-                $d=$_POST['descr'];
+                $n=$_POST['producto'];
+                $d=$_POST['descripcion'];
                 $p=$_POST['precio'];
                 $s=$_POST['stock'];
                 $m=$_POST['marca'];
-                $u=$this->inventarios->IngresarProducto($n,$d,$p,$s,$m);
+                $u=$this->inventarios->IngresarProducto($m,$_SESSION['idNombre'],$n,$d,$p,$s);
                 $this->vista->IngresarProducto();
+
+                //VALUES ('$Marca_IdMarca','$USUARIO_idUSUARIO','$Nombre','$Desc','$Precio','$Stock')";
             }
+
+            public function BuscarP()
+            {
+                $b=$_POST['producto'];
+                $p=$this->inventarios->BuscarProducto($b);
+                $po=array();
+                while($productos=mysqli_fetch_assoc($p))
+                {
+                    array_push($po,$productos);
+                }
+                $_SESSION['lista_producto']=$po;
+                //$this->smarty->assign('lista_producto',$po);
+                $this->vista->BuscarProducto();
+             }
+
+             public function Actualizarp()
+             {
+                 $id=$_GET['idPRODUCTO'];
+                 $producto=$this->inventarios->BuscarP($id);
+                 $po=array();
+                 while($productos=mysqli_fetch_assoc($producto))
+                 {
+                     array_push($po,$productos);
+                 }
+                 $_SESSION['NombreP']=$po[0]['Nombre'];
+                 
+                 $this->vista->ActualizarProducto();
+             }
 
     }
 

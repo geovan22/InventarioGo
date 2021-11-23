@@ -13,7 +13,7 @@
             {foreach from=$p item=$productos}
             <tr>
             <td>{$productos['Nombre']}</td>
-            <td>{$productos['Descricion']}</td>
+            <td>{$productos['Descripcion']}</td>
            <td>{$productos['Precio']}</td>
            <td>{$productos['Stock']}</td>
           </tr>

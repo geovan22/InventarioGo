@@ -11,10 +11,9 @@
 
         <div class="input-field col s6">
           <i class="material-icons prefix">assignment</i>
-          <input name="Descripcion" placeholder="Descripcion" id="descr" type="text" class="validate" required="">
+          <input name="descripcion" placeholder="Descripcion" id="descr" type="text" class="validate" required="">
           <label for="descr">Descripcion</label>
         </div>
-
 
         <div class="input-field col s6">
           <i class="material-icons prefix">attach_money</i>
@@ -30,7 +29,7 @@
         </div>
 
           <div class="input-field col s7">
-        <select class="browser-default">
+        <select name="marca" class="browser-default">
             {foreach from=$m item=$marcas}
               <option value="{$marcas['idMarca']}">
                 {$marcas['Nombre']}

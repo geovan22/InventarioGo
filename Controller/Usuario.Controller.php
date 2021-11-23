@@ -28,7 +28,7 @@
                 session_start();
                 $fila=mysqli_fetch_array($u);
                 $_SESSION['nombre']=$fila['Usuario'];
-                
+                $_SESSION['idNombre']=$fila['idUSUARIO'];
                 $this->smarty->assign('Nombre',$_SESSION['nombre']);
                 $this->smarty->assign('title','Inventario');
                 $this->smarty->assign('Carpeta','Inventario');

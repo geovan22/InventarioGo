@@ -1,13 +1,13 @@
 <div class="row">
-    <form  class="col s10" method="get" action="?Controller=Inventario&Method=IngresoCategoria">
+    <form  class="col s10" method="post" action="?Controller=Inventario&Method=IngresoCategoria">
       <div class="row">
       <h1>Crear Categoria</h1>
 
        <div class="input-field col s7">
-          <select class="browser-default">
-            {foreach from=$m item=$marcas}
-              <option value="{$marcas['idPRODUCTO']}">
-                {$marcas['Nombre']}
+          <select name="nombre" class="browser-default">
+            {foreach from=$p item=$producto}
+              <option value="{$producto['idPRODUCTO']}">
+                {$producto['Nombre']}
               </option>
             {/foreach}
         </select>
@@ -20,7 +20,7 @@
         </div>
         <div class="input-field col s6">
           <i class="material-icons prefix">border_color</i>
-          <input name="Descripcion" placeholder="Descripcion" id="descr" type="text" class="validate" required=""">
+          <input name="descripcion" placeholder="Descripcion" id="descr" type="text" class="validate" required=""">
           <label for="descr">Descripcion</label>
         </div>
       </div>

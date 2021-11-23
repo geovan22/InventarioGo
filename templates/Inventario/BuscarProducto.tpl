@@ -1,5 +1,5 @@
 <div class="row">
-    <form  class="col s10" method="post" action="?Controller=Inventario&Method=IngresoProducto">
+    <form  class="col s10" method="post" action="?Controller=Inventario&Method=BuscarP">
       <div class="row">
       <h1>Buscar Producto</h1>
     
@@ -12,11 +12,32 @@
      <div class="input-field col s4">
          <input  class="waves-effect waves-light btn" type="submit" value="Buscar" />
         </div>
-        <div class="input-field col s4">
-         <input  href="?Controller=RutaVista&Method=ActualizarProducto" class="waves-effect waves-light btn" type="submit" value="Actualizar" />
-      
-        
-        </div>
-        
+
+
     </form>
+
+   {if isset($lista_producto)}
+    <table>
+        <thead>
+          <tr>
+              <th>NOMBRE</th>
+              <th>Actualizar</th>
+              
+          </tr>
+        </thead>
+
+        <tbody>
+            {foreach from=$lista_producto item=$productos}
+            <tr>
+            <td>{$productos['Nombre']}</td>
+            <td> <a href="?Controller=Inventario&Method=Actualizarp&idPRODUCTO={$productos['idPRODUCTO']} ">Actualizar</a> </td>
+         </tr>
+            {/foreach}
+  
+        </tbody>
+      </table>
+    
+   {/if}
+
+
   </div>

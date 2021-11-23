@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-11-23 01:57:33
+/* Smarty version 3.1.40, created on 2021-11-23 02:08:56
   from 'C:\xampp\htdocs\InventarioGo\templates\Navs\NavLateral.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_619c3c7d0c30b6_66058881',
+  'unifunc' => 'content_619c3f281a62a9_17911240',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'df1e0862c62b619cf9afc0f439ffd854f5901392' => 
     array (
       0 => 'C:\\xampp\\htdocs\\InventarioGo\\templates\\Navs\\NavLateral.tpl',
-      1 => 1637628991,
+      1 => 1637629734,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_619c3c7d0c30b6_66058881 (Smarty_Internal_Template $_smarty_tpl) {
+function content_619c3f281a62a9_17911240 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="col s2">
      <div class="collection">
         <a href="?Controller=RutaVista&Method=CrearMarca" class="collection-item">Ingresar Marca</a>
-        <a href="?Controller=RutaVista&Method=IngresarCategoria" class="collection-item">Ingresar Categoria</a>
-        <a href="?Controller=RutaVista&Method=IngresarProveedores" class="collection-item">Ingresar Proveedor </a>
+        <a href="?Controller=RutaVista&Method=CrearCategoria" class="collection-item">Ingresar Categoria</a>
+        <a href="?Controller=RutaVista&Method=IngresarProveedor" class="collection-item">Ingresar Proveedor </a>
         <a href="?Controller=RutaVista&Method=IngresarProducto" class="collection-item">Ingresar Producto</a>
         <a href="?Controller=RutaVista&Method=BuscarProducto" class="collection-item">Buscar Producto</a>
         <a href="?Controller=RutaVista&Method=BorrarProducto"  class="collection-item">Borrar Producto</a>

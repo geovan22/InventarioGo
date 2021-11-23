@@ -1,11 +1,11 @@
 <div class="row">
-    <form  class="col s10" method="post" action="?Controller=Inventario&Method=IngresoProducto">
+    <form  class="col s10" method="post" action="?Controller=Inventario&Method=ActualizarProducto">
       <div class="row">
       <h1>Actualizar Producto</h1>
     
         <div class="input-field col s6">
           <i class="material-icons prefix">account_circle</i>
-          <input name="producto" placeholder="Nombre" id="prod" type="text" class="validate" required="">
+          <input value="{$NombreP}" name="producto" placeholder="Nombre" id="prod" type="text" class="validate" required="">
           <label for="prod">Nombre Producto</label>
         </div>
 

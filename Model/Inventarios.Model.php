@@ -23,8 +23,8 @@
                 $con=new Conexion();
                 $q= "INSERT INTO `categoria`( `PRODUCTO_idPRODUCTO`, `Nombre`, `Descripcion`)
                      VALUES ('$value1','$value2','$value3')";
-                $resultado=$this->con->query($q);
-                $this->con->close();
+                $resultado=$con->query($q);
+                $con->close();
                 return $resultado;
             }
     
@@ -33,28 +33,37 @@
                 $con=new Conexion();
                 $q= "INSERT INTO `proveedor`(`PRODUCTO_idPRODUCTO`, `Nombre`, `Descripcion`, `NIT`, `Correo`, `Telefono`)
                      VALUES ('$value1','$value2','$value3','$value4','$value5','$value6')";
-                $resultado=$this->con->query($q);
-                $this->con->close();
+                $resultado=$con->query($q);
+                $con->close();
                 return $resultado;
             }
     
-            public function IngresarProducto($value1,$value2,$value3,$value4,$value5)
+            public function IngresarProducto($Marca_IdMarca,$USUARIO_idUSUARIO,$Nombre,$Desc,$Precio,$Stock)
             {
                 $con=new Conexion();
-                $q= "INSERT INTO `producto`( `Nombre`, `Descripcion`,`Precio`, `Stock`, `Marca`) 
-                     VALUES ('$value1','$value2','$value3','$value4','$value5')";
-                $resultado=$this->con->query($q);
-                $this->con->close();
+                $q="INSERT INTO `producto`(`Marca_idMarca`, `USUARIO_idUSUARIO`, `Nombre`, `Descripcion`, `Precio`,`Stock`)
+                 VALUES ('$Marca_IdMarca','$USUARIO_idUSUARIO','$Nombre','$Desc','$Precio','$Stock')";
+                $resultado=$con->query($q);
+                $con->close();
                 return $resultado;
             }
-            public function BuscarProducto()
+            public function BuscarProducto($value1)
             {
                 $con=new Conexion();
-                $q= "SELECT * FROM `producto` WHERE nombre= 'value-1'";
-                $resultado=$this->con->query($q);
-                $this->con->close();
+                $q= "SELECT * FROM `producto` WHERE nombre LIKE '%$value1%'";
+                $resultado=$con->query($q);
+                $con->close();
                 return $resultado;
             }
+            public function BuscarP($value1)
+            {
+                $con=new Conexion();
+                $q= "SELECT * FROM `producto` WHERE idPRODUCTO ='$value1'";
+                $resultado=$con->query($q);
+                $con->close();
+                return $resultado;
+            }
+
             public function MostrarProducto()
             {
                 $con=new Conexion();
