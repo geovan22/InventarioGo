@@ -50,6 +50,12 @@
        }
        public function CrearCategoria()
        {
+          $m= $this->inventario->IngresarCategoria();
+          $ma=array();
+          while($marcas=mysqli_fetch_assoc($m))
+          {
+             array_push($ma,$marcas);
+          }
             $this->smarty->assign('Nombre',$_SESSION['nombre']);
             $this->smarty->assign('title','Ingresar Categoria');
             $this->smarty->assign('Invent','CrearCategoria');
@@ -59,6 +65,12 @@
        }
        public function IngresarProveedor()
        {
+          $m= $this->inventario->IngresarProveedores   ();
+          $ma=array();
+          while($marcas=mysqli_fetch_assoc($m))
+          {
+             array_push($ma,$marcas);
+          }
             $this->smarty->assign('Nombre',$_SESSION['nombre']);
             $this->smarty->assign('title','Ingresar Proveedor');
             $this->smarty->assign('Invent','IngresarProveedor');
