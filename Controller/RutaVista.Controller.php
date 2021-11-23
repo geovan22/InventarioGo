@@ -65,11 +65,11 @@
        }
        public function IngresarProveedor()
        {
-          $m= $this->inventario->IngresarProveedores   ();
-          $ma=array();
-          while($marcas=mysqli_fetch_assoc($m))
+          $$p= $this->inventario->Mostr();
+          $po=array();
+          while($productos=mysqli_fetch_assoc($p))
           {
-             array_push($ma,$marcas);
+             array_push($po,$productos);
           }
             $this->smarty->assign('Nombre',$_SESSION['nombre']);
             $this->smarty->assign('title','Ingresar Proveedor');
