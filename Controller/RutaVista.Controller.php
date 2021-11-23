@@ -56,6 +56,7 @@
           {
              array_push($po,$productos);
           }
+          $this->smarty->assign('p',$po);
             $this->smarty->assign('Nombre',$_SESSION['nombre']);
             $this->smarty->assign('title','Ingresar Categoria');
             $this->smarty->assign('Invent','CrearCategoria');
@@ -71,6 +72,7 @@
           {
              array_push($po,$productos);
           }
+          $this->smarty->assign('p',$po);
             $this->smarty->assign('Nombre',$_SESSION['nombre']);
             $this->smarty->assign('title','Ingresar Proveedor');
             $this->smarty->assign('Invent','IngresarProveedor');

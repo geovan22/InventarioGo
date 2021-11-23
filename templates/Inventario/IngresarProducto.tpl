@@ -10,21 +10,21 @@
         </div>
 
         <div class="input-field col s6">
-          <i class="material-icons prefix">border_color</i>
+          <i class="material-icons prefix">assignment</i>
           <input name="Descripcion" placeholder="Descripcion" id="descr" type="text" class="validate" required="">
           <label for="descr">Descripcion</label>
         </div>
 
 
         <div class="input-field col s6">
-          <i class="material-icons prefix">border_color</i>
+          <i class="material-icons prefix">attach_money</i>
           <input name="precio" placeholder="Precio" id="precio" type="number" class="validate" required="">
           <label for="precio">Precio</label>
         </div>
 
         
              <div class="input-field col s6">
-          <i class="material-icons prefix">border_color</i>
+          <i class="material-icons prefix">add_shopping_cart</i>
           <input name="stock" placeholder="Stock" id="stock" type="number" class="validate" required="">
           <label for="stock">Stock</label>
         </div>

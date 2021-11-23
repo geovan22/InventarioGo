@@ -20,11 +20,23 @@
             }
             public function IngresoCategoria()
             {
-                $m=$_POST['marca'];
+                $m=$_POST['categoria'];
                 $d=$_POST['descr'];
                 $p=$_POST['producto'];
                 $u=$this->inventarios->IngresoCategoria($m,$d,$p);
-                $this->vista->CrearCategoria();
+                $this->vista->IngresarCategoria();
+            }
+
+            public function IngresoProveedor()
+            {
+                $p=$_POST['producto'];
+                 $pr=$_POST['provee'];
+                $d=$_POST['descr'];
+                $n=$_POST['nit'];
+                $c=$_POST['correo'];
+               
+                $u=$this->inventarios->IngresoProveedor($p,$pe,$d,$n,$c);
+                $this->vista->IngresarProveedores();
             }
         public function IngresoProducto()
             {

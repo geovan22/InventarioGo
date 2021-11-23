@@ -13,8 +13,8 @@
          </div>
         <div class="input-field col s6">
           <i class="material-icons prefix">account_circle</i>
-          <input name="marca" placeholder="Nombre Marca" id="marca" type="text" class="validate" required="">
-          <label for="marca">Nombre</label>
+          <input name="provee" placeholder="Nombre Proveedor" id="provee" type="text" class="validate" required="">
+          <label for="provee">Nombre</label>
         </div>
         <div class="input-field col s6 ">
           <i class="material-icons prefix">border_color</i>
