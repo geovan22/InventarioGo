@@ -55,6 +55,8 @@
                 $con->close();
                 return $resultado;
             }
+         
+
             public function BuscarP($value1)
             {
                 $con=new Conexion();
@@ -73,10 +75,10 @@
                 return $resultado;
             }
     
-            public function BorrarProducto()
+            public function BorrarProducto($value1)
             {
                 $con=new Conexion();
-                $q= "DELETE FROM `producto` WHERE nombre= 'value-1' ";
+                $q= "DELETE FROM `producto` WHERE nombre= '$value1' ";
                 $resultado=$this->con->query($q);
                 $this->con->close();
                 return $resultado;

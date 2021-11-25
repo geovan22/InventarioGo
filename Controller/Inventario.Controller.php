@@ -77,9 +77,22 @@
                  {
                      array_push($po,$productos);
                  }
-                 $_SESSION['NombreP']=$po[0]['Nombre'];
-                 
+                 $_SESSION['NombreP']=$po[0]['Nombre']; 
+                 $_SESSION['DescripcionP']=$po[1]['Descripcion'];
+                 $_SESSION['NombreP']=$po[2]['Precio']; 
+                 $_SESSION['DescripcionP']=$po[3]['Stock'];
+                 $_SESSION['DescripcionP']=$po[4]['Marca'];
+                 var_dump($po); 
                  $this->vista->ActualizarProducto();
+             }
+
+             public function BorrarProducto()
+             {
+                 $n=$_POST['producto'];
+                 $u=$this->inventarios->BorrarProducto($m,$_SESSION['idNombre'],$n);
+                 $this->vista->BorrarProducto();
+                    var_dump($_POST);
+                 //VALUES ('$Marca_IdMarca','$USUARIO_idUSUARIO','$Nombre','$Desc','$Precio','$Stock')";
              }
 
     }
