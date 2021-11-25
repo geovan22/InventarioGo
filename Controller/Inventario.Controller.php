@@ -87,12 +87,15 @@
              }
 
              public function BorrarProducto()
-             {
-                 $n=$_POST['producto'];
-                 $u=$this->inventarios->BorrarProducto($m,$_SESSION['idNombre'],$n);
+             {x
+                $n=$_POST['producto'];
+                $d=$_POST['descripcion'];
+                $p=$_POST['precio'];
+                $s=$_POST['stock'];
+                $m=$_POST['marca'];
+                $u=$this->inventarios->BorrarProducto($m,$_SESSION['idNombre'],$n,$d,$p,$s);
                  $this->vista->BorrarProducto();
                     var_dump($_POST);
-                 //VALUES ('$Marca_IdMarca','$USUARIO_idUSUARIO','$Nombre','$Desc','$Precio','$Stock')";
              }
 
     }
