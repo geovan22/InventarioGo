@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-11-25 02:59:39
+/* Smarty version 3.1.40, created on 2021-11-25 03:29:07
   from 'C:\xampp\htdocs\InventarioGo\templates\Cabeceras\Footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_619eee0b65eeb2_95641530',
+  'unifunc' => 'content_619ef4f3733775_39452689',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_619eee0b65eeb2_95641530 (Smarty_Internal_Template $_smarty_tpl) {
+function content_619ef4f3733775_39452689 (Smarty_Internal_Template $_smarty_tpl) {
 ?>      
       </div>
       <footer class="page-footer">

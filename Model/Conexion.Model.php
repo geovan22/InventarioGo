@@ -3,19 +3,20 @@
     {
 	   public function __construct()
        {
+           /**
             $servidor="localhost";
             $password="";
             $usuario="root";
             $DB="inventario";
+              Produccion */
             
-            /**
-            Produccion  
+          
              
-            $servidor="localhost";
-            $password="";
-            $usuario="root";
+            $servidor="mysql.webcindario.com";
+            $password="Denver900";
+            $usuario="lluvia";
             $DB="inventario";
-            */
+          
             
             parent::__construct($servidor,$usuario,$password,$DB);
             

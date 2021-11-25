@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-11-25 03:23:00
+/* Smarty version 3.1.40, created on 2021-11-25 03:36:57
   from 'C:\xampp\htdocs\InventarioGo\templates\Inventario\BorrarProducto.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_619ef384c47fa9_96235346',
+  'unifunc' => 'content_619ef6c9c93f53_56556999',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f9bb3ae80a0df7902003fd0bef90ef57f9c20faf' => 
     array (
       0 => 'C:\\xampp\\htdocs\\InventarioGo\\templates\\Inventario\\BorrarProducto.tpl',
-      1 => 1637806966,
+      1 => 1637807798,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_619ef384c47fa9_96235346 (Smarty_Internal_Template $_smarty_tpl) {
+function content_619ef6c9c93f53_56556999 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="row">
     <form  class="col s10" method="post" action="?Controller=Inventario&Method=BorrarProducto">
       <div class="row">

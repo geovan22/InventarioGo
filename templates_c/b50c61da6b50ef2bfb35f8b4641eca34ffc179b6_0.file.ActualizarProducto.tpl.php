@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-11-25 03:05:06
+/* Smarty version 3.1.40, created on 2021-11-25 03:29:59
   from 'C:\xampp\htdocs\InventarioGo\templates\Inventario\ActualizarProducto.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_619eef52438255_28698908',
+  'unifunc' => 'content_619ef527ddf149_87969183',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_619eef52438255_28698908 (Smarty_Internal_Template $_smarty_tpl) {
+function content_619ef527ddf149_87969183 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="row">
     <form  class="col s10" method="post" action="?Controller=Inventario&Method=ActualizarProducto">
       <div class="row">

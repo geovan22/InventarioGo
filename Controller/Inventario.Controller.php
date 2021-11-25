@@ -117,6 +117,13 @@
                    
              }
 
+             public function BorrarP()
+             {
+                 $m=$_POST['idPRODUCTO'];
+                 $u=$this->inventarios->BorrarProducto($m);
+                 $this->vista->BorrarProducto();
+             }
+
     }
 
 ?>
