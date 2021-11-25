@@ -81,27 +81,7 @@
             $this->smarty->display('Index.tpl');
        }
 
-       public function BorrarProducto()
-       {
-            $this->smarty->assign('Nombre',$_SESSION['nombre']);
-            $this->smarty->assign('title','Borrar Producto');
-            $this->smarty->assign('Invent','BorrarProducto');
-            $this->smarty->assign('Carpeta','Inventario');
-            $this->smarty->assign('Vista','Inventario');
-            $this->smarty->display('Index.tpl');
-       }
-
-       public function BorrarP()
-       {
-            $this->smarty->assign('lista_producto',$_SESSION['lista_producto']);
-            $this->smarty->assign('Nombre',$_SESSION['nombre']);
-            $this->smarty->assign('title','Borrar Producto');
-            $this->smarty->assign('Invent','BorrarProducto');
-            $this->smarty->assign('Carpeta','Inventario');
-            $this->smarty->assign('Vista','Inventario');
-            $this->smarty->display('Index.tpl');
-       }
-
+ 
        public function MostrarProducto()
        {
           $p= $this->inventario->MostrarProducto();
@@ -139,6 +119,28 @@
             $this->smarty->assign('Vista','Inventario');
             $this->smarty->display('Index.tpl');
        }
+
+       public function BorrarProducto()
+       {
+            $this->smarty->assign('Nombre',$_SESSION['nombre']);
+            $this->smarty->assign('title','Borrar Producto');
+            $this->smarty->assign('Invent','BorrarProducto');
+            $this->smarty->assign('Carpeta','Inventario');
+            $this->smarty->assign('Vista','Inventario');
+            $this->smarty->display('Index.tpl');
+       }
+
+       public function BorrarP()
+       {
+            $this->smarty->assign('lista_producto',$_SESSION['lista_producto']);
+            $this->smarty->assign('Nombre',$_SESSION['nombre']);
+            $this->smarty->assign('title','Borrar Producto');
+            $this->smarty->assign('Invent','BorrarProducto');
+            $this->smarty->assign('Carpeta','Inventario');
+            $this->smarty->assign('Vista','Inventario');
+            $this->smarty->display('Index.tpl');
+       }
+
        
     }
 ?>
