@@ -79,17 +79,17 @@
             {
                 $con=new Conexion();
                 $q= "DELETE FROM `producto` WHERE nombre= '$value1' ";
-                $resultado=$this->con->query($q);
-                $this->con->close();
+                $resultado=$con->query($q);
+                $con->close();
                 return $resultado;
             }
         
-            public function ActualizarProducto()
+            public function ActualizarProducto($id,$value5,$value6,$value7,$value8,$value9)
             {
                 $con=new Conexion();
-                $q= "UPDATE `producto` SET `idPRODUCTO`='[value-1]',`Marca_idMarca`='[value-2]',`Nombre`='[value-3]',`Descripcion`='[value-4]',`Categoria`='[value-5]',`Precio`='[value-6]',`Proveedor`='[value-7]',`Stock`='[value-8]',`Marca`='[value-9]' WHERE idProducto ";
-                $resultado=$this->con->query($q);
-                $this->con->close();
+                $q= "UPDATE `producto` SET `Nombre`='$value5',`Descripcion`='$value6',`Precio`='$value7',`Stock`='$value8',`Marca_idMarca`='$value9' WHERE idProducto ='$id'";
+                $resultado=$con->query($q);
+                $con->close();
                 return $resultado;
             }
 

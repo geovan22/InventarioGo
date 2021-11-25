@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-11-23 04:11:27
+/* Smarty version 3.1.40, created on 2021-11-25 03:05:06
   from 'C:\xampp\htdocs\InventarioGo\templates\Inventario\ActualizarProducto.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_619c5bdf6cf599_20387195',
+  'unifunc' => 'content_619eef52438255_28698908',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b50c61da6b50ef2bfb35f8b4641eca34ffc179b6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\InventarioGo\\templates\\Inventario\\ActualizarProducto.tpl',
-      1 => 1637637084,
+      1 => 1637804566,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_619c5bdf6cf599_20387195 (Smarty_Internal_Template $_smarty_tpl) {
+function content_619eef52438255_28698908 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="row">
     <form  class="col s10" method="post" action="?Controller=Inventario&Method=ActualizarProducto">
       <div class="row">
@@ -35,26 +35,34 @@ function content_619c5bdf6cf599_20387195 (Smarty_Internal_Template $_smarty_tpl)
 
         <div class="input-field col s6">
           <i class="material-icons prefix">assignment</i>
-          <input name="Descripcion" placeholder="Descripcion" id="descr" type="text" class="validate" required="">
+          <input value="<?php echo $_smarty_tpl->tpl_vars['DescripcionP']->value;?>
+" name="Descripcion" placeholder="Descripcion" id="descr" type="text" class="validate" required="">
           <label for="descr">Descripcion</label>
         </div>
 
 
         <div class="input-field col s6">
           <i class="material-icons prefix">attach_money</i>
-          <input name="precio" placeholder="Precio" id="precio" type="number" class="validate" required="">
+          <input value="<?php echo $_smarty_tpl->tpl_vars['PrecioP']->value;?>
+" name="precio" placeholder="Precio" id="precio" type="number" class="validate" required="">
           <label for="precio">Precio</label>
         </div>
 
         
              <div class="input-field col s6">
           <i class="material-icons prefix">add_shopping_cart</i>
-          <input name="stock" placeholder="Stock" id="stock" type="number" class="validate" required="">
+          <input value="<?php echo $_smarty_tpl->tpl_vars['StockP']->value;?>
+" name="stock" placeholder="Stock" id="stock" type="number" class="validate" required="">
           <label for="stock">Stock</label>
         </div>
-
+     
+        <div>
+         <input  name="id" type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
+" />
+        </div>
+        
           <div class="input-field col s7">
-        <select class="browser-default">
+        <select name= "marca" class="browser-default">
             <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['m']->value, 'marcas');
 $_smarty_tpl->tpl_vars['marcas']->do_else = true;
@@ -72,7 +80,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </select>
          </div>
         
-      </div>
+      
+
      <div class="input-field col s8">
          <input  class="waves-effect waves-light btn" type="submit" value="Ingresar" />
         </div>

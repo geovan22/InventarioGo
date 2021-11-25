@@ -90,6 +90,18 @@
             $this->smarty->assign('Vista','Inventario');
             $this->smarty->display('Index.tpl');
        }
+
+       public function BorrarP()
+       {
+            $this->smarty->assign('lista_producto',$_SESSION['lista_producto']);
+            $this->smarty->assign('Nombre',$_SESSION['nombre']);
+            $this->smarty->assign('title','Borrar Producto');
+            $this->smarty->assign('Invent','BorrarProducto');
+            $this->smarty->assign('Carpeta','Inventario');
+            $this->smarty->assign('Vista','Inventario');
+            $this->smarty->display('Index.tpl');
+       }
+
        public function MostrarProducto()
        {
           $p= $this->inventario->MostrarProducto();
@@ -108,7 +120,18 @@
        }
        public function ActualizarProducto()
        {
+          $m= $this->inventario->MostrarMarca();
+          $ma=array();
+          while($marcas=mysqli_fetch_assoc($m))
+          {
+             array_push($ma,$marcas);
+          }
+          $this->smarty->assign('id',$_SESSION['idP']);
+          $this->smarty->assign('m',$ma);
             $this->smarty->assign('NombreP',$_SESSION['NombreP']);
+            $this->smarty->assign('DescripcionP',$_SESSION['DescripcionP']);
+            $this->smarty->assign('PrecioP',$_SESSION['PrecioP']);
+            $this->smarty->assign('StockP',$_SESSION['StockP']);
             $this->smarty->assign('Nombre',$_SESSION['nombre']);
             $this->smarty->assign('title','Actualizar Producto');
             $this->smarty->assign('Invent','ActualizarProducto');

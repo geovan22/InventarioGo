@@ -64,7 +64,6 @@
                     array_push($po,$productos);
                 }
                 $_SESSION['lista_producto']=$po;
-                //$this->smarty->assign('lista_producto',$po);
                 $this->vista->BuscarProducto();
              }
 
@@ -77,25 +76,45 @@
                  {
                      array_push($po,$productos);
                  }
+                 $_SESSION['idP']=$id;
                  $_SESSION['NombreP']=$po[0]['Nombre']; 
-                 $_SESSION['DescripcionP']=$po[1]['Descripcion'];
-                 $_SESSION['NombreP']=$po[2]['Precio']; 
-                 $_SESSION['DescripcionP']=$po[3]['Stock'];
-                 $_SESSION['DescripcionP']=$po[4]['Marca'];
-                 var_dump($po); 
+                 $_SESSION['DescripcionP']=$po[0]['Descripcion'];
+                 $_SESSION['PrecioP']=$po[0]['Precio']; 
+                 $_SESSION['StockP']=$po[0]['Stock'];
+                 $_SESSION['MarcaP']=$po[0]['Marca'];
+               
                  $this->vista->ActualizarProducto();
              }
 
-             public function BorrarProducto()
-             {x
+             public function ActualizarProducto()
+             {
+                $id=$_POST['id'];
                 $n=$_POST['producto'];
-                $d=$_POST['descripcion'];
+                $d=$_POST['Descripcion'];
                 $p=$_POST['precio'];
                 $s=$_POST['stock'];
                 $m=$_POST['marca'];
-                $u=$this->inventarios->BorrarProducto($m,$_SESSION['idNombre'],$n,$d,$p,$s);
-                 $this->vista->BorrarProducto();
-                    var_dump($_POST);
+                $u=$this->inventarios->ActualizarProducto($id,$n,$d,$p,$s,$m);
+               
+                $this->vista->BuscarProducto();
+
+             }
+
+             public function BorrarProducto()
+             { 
+                
+                $b=$_POST['producto'];
+                $p=$this->inventarios->BuscarProducto($b);
+               
+                $po=array();
+                while($productos=mysqli_fetch_assoc($p))
+                {
+                    array_push($po,$productos);
+                }
+                var_dump($po);
+                $_SESSION['lista_producto']=$po;
+                 $this->vista->BorrarP();
+                   
              }
 
     }

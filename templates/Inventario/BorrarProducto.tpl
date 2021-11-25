@@ -12,8 +12,6 @@
      <div class="input-field col s4">
          <input  class="waves-effect waves-light btn" type="submit" value="Buscar" />
         </div>
-
-
     </form>
 
    {if isset($lista_producto)}
@@ -22,7 +20,6 @@
           <tr>
               <th>NOMBRE</th>
               <th>Borrar</th>
-              
           </tr>
         </thead>
 
@@ -30,7 +27,7 @@
             {foreach from=$lista_producto item=$productos}
             <tr>
             <td>{$productos['Nombre']}</td>
-            <td> <a href="?Controller=Inventario&Method=BorrarProducto&idPRODUCTO={$productos['idPRODUCTO']} ">Borrar</a> </td>
+            <td> <a href="?Controller=Inventario&Method=BorrarP&idPRODUCTO={$productos['idPRODUCTO']} ">Borrar</a> </td>
          </tr>
             {/foreach}
   

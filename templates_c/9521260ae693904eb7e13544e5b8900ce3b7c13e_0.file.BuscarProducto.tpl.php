@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-11-23 04:07:41
+/* Smarty version 3.1.40, created on 2021-11-25 03:05:00
   from 'C:\xampp\htdocs\InventarioGo\templates\Inventario\BuscarProducto.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_619c5afdb24996_90648255',
+  'unifunc' => 'content_619eef4c5d0994_95231757',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_619c5afdb24996_90648255 (Smarty_Internal_Template $_smarty_tpl) {
+function content_619eef4c5d0994_95231757 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="row">
     <form  class="col s10" method="post" action="?Controller=Inventario&Method=BuscarP">
       <div class="row">

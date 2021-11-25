@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-11-12 03:21:10
+/* Smarty version 3.1.40, created on 2021-11-25 02:59:39
   from 'C:\xampp\htdocs\InventarioGo\templates\Home\Home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_618dcf96f31f86_08532268',
+  'unifunc' => 'content_619eee0b5b6515_17390853',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0141dfcc4254908d230c0b369eebc6ef3ef6a19b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\InventarioGo\\templates\\Home\\Home.tpl',
-      1 => 1636683637,
+      1 => 1636686521,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_618dcf96f31f86_08532268 (Smarty_Internal_Template $_smarty_tpl) {
+function content_619eee0b5b6515_17390853 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container">
      <div class="row">
         <div class="col s12">

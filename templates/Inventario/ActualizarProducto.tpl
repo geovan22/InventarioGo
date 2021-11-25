@@ -11,26 +11,30 @@
 
         <div class="input-field col s6">
           <i class="material-icons prefix">assignment</i>
-          <input name="Descripcion" placeholder="Descripcion" id="descr" type="text" class="validate" required="">
+          <input value="{$DescripcionP}" name="Descripcion" placeholder="Descripcion" id="descr" type="text" class="validate" required="">
           <label for="descr">Descripcion</label>
         </div>
 
 
         <div class="input-field col s6">
           <i class="material-icons prefix">attach_money</i>
-          <input name="precio" placeholder="Precio" id="precio" type="number" class="validate" required="">
+          <input value="{$PrecioP}" name="precio" placeholder="Precio" id="precio" type="number" class="validate" required="">
           <label for="precio">Precio</label>
         </div>
 
         
              <div class="input-field col s6">
           <i class="material-icons prefix">add_shopping_cart</i>
-          <input name="stock" placeholder="Stock" id="stock" type="number" class="validate" required="">
+          <input value="{$StockP}" name="stock" placeholder="Stock" id="stock" type="number" class="validate" required="">
           <label for="stock">Stock</label>
         </div>
-
+     
+        <div>
+         <input  name="id" type="hidden" value="{$id}" />
+        </div>
+        
           <div class="input-field col s7">
-        <select class="browser-default">
+        <select name= "marca" class="browser-default">
             {foreach from=$m item=$marcas}
               <option value="{$marcas['idMarca']}">
                 {$marcas['Nombre']}
@@ -39,7 +43,8 @@
         </select>
          </div>
         
-      </div>
+      
+
      <div class="input-field col s8">
          <input  class="waves-effect waves-light btn" type="submit" value="Ingresar" />
         </div>
